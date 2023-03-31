@@ -19,7 +19,6 @@ MAIN:	la $t0, x
 		li $v0, 1		# print y 
 		syscall	
 		j END
-
 		
 SUM: 	addi $sp, $sp, -4
 		sw $s0, 0($sp)		# store $s0 from MAIN
@@ -56,7 +55,6 @@ SUB:	la $t0, b
 		lw $s0, 0($sp)		# Restore s0 from SUM
 		addi $sp, $sp 4
 		jr $ra
-
 		
 END:	li      $v0, 10		
 		syscall	
